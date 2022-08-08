@@ -38,7 +38,12 @@ To inlcude the translation helper methods, add this to your
 ```include Bsi18nScaffold::ScaffoldHelper
 ```
 
-You can then run:
+To copy the templates into your lib directory, run:
+```bash
+$ rake bsi18n_scaffold:copy_template
+```
+
+and then slash and burn as needed.
 
 ## Contributing
 Contribution directions go here.
