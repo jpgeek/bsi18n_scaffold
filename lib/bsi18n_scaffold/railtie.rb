@@ -12,8 +12,10 @@ module Bsi18nScaffold
     # Add the translation templates to the path.
     initializer 'rails-i18n' do |app|
       Bsi18nScaffold::Railtie.instance_eval do
+        require 'byebug'
+        byebug
         pattern = pattern_from app.config.i18n.available_locales
-        add("../../config/locales/#{pattern}.yml")
+        add("config/locales/#{pattern}.yml")
       end
     end
 
