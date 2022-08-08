@@ -1,0 +1,38 @@
+en:
+  template:
+    errors_prevented_record_from_being_saved: 
+      one: 1 error prevented this %{model} from being saved
+      other: "%{count} errors prevented this %{model} from being saved"
+    select:
+      prompt: Please select
+    submit:
+      create: Create %{model}
+      submit: Save %{model}
+      update: Update %{model}
+    model_created: '%{model} created'
+    model_updated: '%{model} updated'
+    model_deleted: '%{model} deleteed'
+    model_not_created: '%{model} could not be created'
+    model_not_updated: '%{model} could not be updated'
+    model_not_deleteed: '%{model} could not be deleteed'
+    new_model: 'New %{model}'
+    add_model: 'Add New %{model}'
+    create_model: 'Create %{model}'
+    listing_model: '%{model} list'
+    show_model: 'Display %{model}'
+    edit_model: 'Edit %{model}'
+    back_to_model_index: "Back to %{model} list"
+    delete_model: 'Delete %{model}'
+    found_results: '%{count} records found'
+    limiting_results: 'Limiting results to %{count} records!'
+    show: 'Show'
+    create: 'Create'
+    delete: 'Delete'
+    edit: 'Edit'
+    update: 'Update'
+    new: 'New'
+    back: 'Back'
+    back_to_index: "Back to list"
+    search: 'Search'
+    confirm_delete: 'Delete record?' 
+    print: 'Print'

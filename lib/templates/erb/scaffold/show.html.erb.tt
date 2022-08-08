@@ -1,0 +1,17 @@
+<p style="color: green"><%%= notice %></p>
+
+<%%= render @<%= singular_table_name %> %>
+
+<div>
+  <div class='controls d-flex flex-row'>
+    <div class='p-2'>
+      <%%= to_edit_button(@<%= singular_table_name %>) %>
+    </div>
+    <div class='p-2'>
+      <%%= to_index_button <%= class_name %> %>
+    </div>
+    <div class='p-2'>
+      <%%= destroy_button(@<%= singular_table_name %>) %>
+    </div>
+  </div>
+</div>

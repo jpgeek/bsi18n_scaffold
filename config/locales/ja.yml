@@ -1,0 +1,36 @@
+ja:
+  template:
+    errors_prevented_record_from_being_saved: "%{count}件のエラーがありましたので保存ができませんでした"
+    select:
+      prompt: 選択してください
+    submit:
+      create: 登録
+      submit: 送信
+      update: 更新
+    model_created: '%{model}が作成されました'
+    model_updated: '%{model}が更新されました'
+    model_deleted: '%{model}が削除されました'
+    model_not_created: '%{model} 作成が出来ませんでした'
+    model_not_updated: '%{model} の更新が出来ませんでした'
+    model_not_deleted: '%{model} 削除が出来ませんでした'
+    new_model: '新規%{model}'
+    add_model: '新規%{model}の追加'
+    create_model: '%{model}作成'
+    listing_model: '%{model}一覧'
+    show_model: '%{model}表示'
+    edit_model: '%{model}編集'
+    back_to_model_index: "%{model}一覧へ戻る"
+    delete_model: '%{model}削除'
+    found_results: '%{count}件の該当が有りました'
+    limiting_results: '件数は%{count}件に制限されています!'
+    show: '表示'
+    create: '作成'
+    delete: '削除'
+    edit: '編集'
+    update: '更新'
+    new: '新規'
+    back: '戻る'
+    back_to_index: "一覧へ戻る"
+    search: '検索'
+    confirm_delete: '削除しますか?' 
+    print: '印刷'

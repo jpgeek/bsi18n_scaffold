@@ -1,0 +1,14 @@
+<%%= form_with(model: <%= model_resource_name %>) do |form| %>
+  <%%= render partial: 'common/form_errors', locals: {model: @<%= singular_table_name %>} %>
+
+  <%% fh = Zs::Bootstrap::VerticalFormHelper.new(self, form) %>
+
+
+<% attributes.each do |attribute| -%>
+  <%%= fh.decorated_field({field: {field: :<%= attribute.column_name %>, method: :<%= attribute.field_type %>}}) %>
+<% end %>
+
+  <div>
+    <%%= submit_button( @<%= model_resource_name %> ) %>
+  </div>
+<%% end %>

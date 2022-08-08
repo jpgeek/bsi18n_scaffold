@@ -1,0 +1,20 @@
+<div class='card border-primary mb-3'>
+  <h3 class='card-header'>
+    <%%= I18n.t('template.new_model', model: <%= class_name %>.model_name.human) %>
+  </h3>
+  <div class='card-body'>
+    <div class='bs-component'>
+      <%%= render "form", <%= singular_table_name %>: @<%= singular_table_name %> %>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div>
+  <div class='controls d-flex flex-row'>
+    <div class='p-2'>
+      <%%= to_index_button <%= class_name %> %>
+    </div>
+  </div>
+</div>
