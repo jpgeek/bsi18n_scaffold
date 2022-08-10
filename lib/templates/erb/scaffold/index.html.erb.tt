@@ -4,31 +4,33 @@
   <h1><%%= I18n.t('template.listing_model', model: <%= class_name %>.model_name.human) %></h1>
 </div>
 
-<table class='table table-striped index-table'>
-  <thead>
-    <tr>
-<% attributes.reject(&:password_digest?).each do |attribute| -%>
-      <th scope='col'><%%= <%= class_name %>.human_attribute_name(:<%= attribute.name %>) %></th>
-<% end -%>
-      <th scope='col' class='text-center'><%%= I18n.t('template.show') %></th>
-      <th scope='col' class='text-center'><%%= I18n.t('template.edit') %></th>
-      <th scope='col' class='text-center'><%%= I18n.t('template.delete') %></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
+<div class='table-responsive'>
+  <table class='table table-striped index-table'>
+    <thead>
       <tr>
-<% attributes.reject(&:password_digest?).each do |attribute| -%>
-        <td><%%= <%= singular_table_name %>.<%= attribute.name %> %></td>
-<% end -%>
-        <td class='text-center'><%%= to_show_icon(<%= singular_table_name %>) %></td>
-        <td class='text-center'><%%= to_edit_icon(<%= singular_table_name %>) %></td>
-        <td class='text-center'><%%= destroy_icon(<%= singular_table_name %>) %></td>
+  <% attributes.reject(&:password_digest?).each do |attribute| -%>
+        <th scope='col'><%%= <%= class_name %>.human_attribute_name(:<%= attribute.name %>) %></th>
+  <% end -%>
+        <th scope='col' class='text-center'><%%= I18n.t('template.show') %></th>
+        <th scope='col' class='text-center'><%%= I18n.t('template.edit') %></th>
+        <th scope='col' class='text-center'><%%= I18n.t('template.delete') %></th>
       </tr>
-    <%% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
+        <tr>
+  <% attributes.reject(&:password_digest?).each do |attribute| -%>
+          <td><%%= <%= singular_table_name %>.<%= attribute.name %> %></td>
+  <% end -%>
+          <td class='text-center'><%%= to_show_icon(<%= singular_table_name %>) %></td>
+          <td class='text-center'><%%= to_edit_icon(<%= singular_table_name %>) %></td>
+          <td class='text-center'><%%= destroy_icon(<%= singular_table_name %>) %></td>
+        </tr>
+      <%% end %>
+    </tbody>
+  </table>
+</div>
 
 <div>
   <div class='controls d-flex flex-row'>
