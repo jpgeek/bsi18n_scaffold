@@ -3,13 +3,12 @@ This wraps my I18n enabled Bootstrap scaffolding.
 
 Out of the box, Rails scaffolding is not I18n capable and has a bunch of hard
 coded error and success messages in the controller and templates.  To work with 
-I18n, I added a bunch of translation helpers and modified the erb and controller
-scaffolding templates.  I also added in translation files for japanese and english,
-but if anyone cares to contribute more I would be happy to chuck em in. Note that
-RailsI18n does not have the required translations for this.
+I18n, this gem adds translation helpers and provides I18n capable erb and controller
+scaffolding templates.  It also adds required translation YML files for English and 
+Japanese (the RailsI18n does not include them).
 
 Scaffolding is fairly project specific though so I don't know if this has enough 
-legs to warrant pushing it to Rubygems and adding all the tests.
+legs to warrant pushing it to Rubygems.
 
 
 ## Usage
@@ -18,17 +17,12 @@ legs to warrant pushing it to Rubygems and adding all the tests.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "bsi18n_scaffold"
+gem "bsi18n_scaffold", git: "https://github.com/jpgeek/bsi18n_scaffold"
 ```
 
 And then execute:
 ```bash
 $ bundle
-```
-
-Or install it yourself as:
-```bash
-$ gem install bsi18n_scaffold
 ```
 
 To inlcude the translation helper methods, add this to your 
@@ -46,7 +40,7 @@ $ rake bsi18n_scaffold:copy_template
 and then slash and burn as needed.
 
 ## Contributing
-Contribution directions go here.
+Translations are welcome, as are other template sets (erb, slim, haml etc).
 
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
