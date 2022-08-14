@@ -107,13 +107,29 @@ module Bsi18nScaffold
       end
     end
 
-    def invalid_feedback(form, field)
+    def invalid_feedback(form, col_name)
+      field = col_to_attr(col_name)
       object = form.object
       return unless object&.errors&.attribute_names&.include?(field)
       object.errors[field].map do |msg|
         tag.div(class: 'invalid-feedback') { msg }
       end.join.html_safe
     end
+
+    def invalid_class(form, col_name, class_string)
+      field = col_to_attr(col_name)
+      object = form.object
+      return class_string unless object&.errors&.attribute_names&.include?(field)
+      class_string + ' is-invalid'
+    end
+
+    # Get attribute name from column name.  Errors are on the attribute name
+    # (e.g. "country") but params are keyed on the column name (e.g.
+    # country_id).
+    def col_to_attr(column)
+      column.to_s.sub(/_id\z/,'').to_sym
+    end
+    private :col_to_attr
 
     # rails flashes should be :error, :warning, :notice
     def flash_type_to_bootstrap(type)

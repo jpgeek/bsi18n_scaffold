@@ -21,7 +21,7 @@
 	<div class="form-group row mb-3">
 		<%%= form.label :<%= attribute.column_name %>, class: 'col-sm-2 col-form-label form-check-label' %>
 		<div class="col-sm-10">
-			<%%= form.<%= attribute.field_type %> :<%= attribute.column_name %>, class: 'form-check-input' %>
+    <%%= form.<%= attribute.field_type %> :<%= attribute.column_name %>, class: invalid_class(form, :<%= attribute.column_name %>, 'form-check-input') %>
       <%%= invalid_feedback(form, :<%= attribute.column_name %>) %>
 		</div>
 	</div>
@@ -29,7 +29,7 @@
 	<div class="form-group row mb-3">
 		<%%= form.label :<%= attribute.column_name %>, class: 'col-sm-2 col-form-label form-label' %>
 		<div class="col-sm-10">
-			<%%= form.<%= attribute.field_type %> :<%= attribute.column_name %>, class: 'form-control' %>
+    <%%= form.<%= attribute.field_type %> :<%= attribute.column_name %>, class: invalid_class(form, :<%= attribute.column_name %>, 'form-control') %>
       <%%= invalid_feedback(form, :<%= attribute.column_name %>) %>
 		</div>
 	</div>
