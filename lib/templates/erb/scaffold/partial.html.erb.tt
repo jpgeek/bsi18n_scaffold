@@ -8,5 +8,6 @@
       <strong><%%= <%= class_name %>.human_attribute_name(:<%= attribute.column_name %>) %></strong>
       <%%= <%= singular_name %>.<%= attribute.column_name %> %>
     </p>
+  </div>
 <% end -%>
 </div>
